@@ -25,3 +25,18 @@ p2.sayHello();
 p3.sayHello();
 p4.sayHello();
 p5.sayHello();
+
+class Human{
+    constructor (name, city, age) {
+        this.name = name,
+        this.city = city,
+        this.age = age
+    }
+
+    sayHello() {
+        console.log(`Hello! my name is ${this.name}, I am ${this.age}, and I live in ${this.city}.`);
+    };
+};
+
+let per1 = new Human('Randy', 'Nashville', 47);
+per1.sayHello();
