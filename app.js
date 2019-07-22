@@ -40,3 +40,51 @@ class Human{
 
 let per1 = new Human('Randy', 'Nashville', 47);
 per1.sayHello();
+
+class Vehicle {
+    constructor(manuf, wheels) {
+        this.manufacturer = manuf,
+        this.wheels = wheels
+    }
+    aboutVehicle () {
+        console.log(`This Vehicle is a ${this.type}, it was made by ${this.manufacturer}, and it has ${this.wheels} wheels.`);
+    }
+}
+
+class Truck extends Vehicle {
+    constructor (doors, bed) {
+        super(manuf, wheels);
+        this.type = 'Truck',
+        this.doors = doors,
+        this.bed = bed
+    }
+    aboutVehicle () {
+        console.log(`This Vehicle is a ${this.type}, it was made by ${this.manufacturer}, and it has ${this.wheels} wheels, ${this.doors} doors, and a bed.`);
+    }
+}
+
+class Sedan extends Vehicle {
+    constructor (doors, size, mpg) {
+        super(manuf, wheels);
+        this.type = 'Sedan',
+        this.doors = doors,
+        this.size = size,
+        this.mpg = mpg
+    }
+    aboutVehicle () {
+        console.log(`This Vehicle is a ${this.type}, it was made by ${this.manufacturer}, and it has ${this.wheels} wheels. It is a ${this.size} size sedan, and gets ${this.mpg} miles to the gallon.`);
+    }
+}
+
+class Motorcycle extends Vehicle {
+    constructor (){
+        super(manuf, wheels);
+        this.type = 'Motorcycle',
+        this.doors = 0,
+        this.steering = 'Handlebars'
+    }
+    aboutVehicle () {
+        console.log(`This Vehicle is a ${this.type}, it was made by ${this.manufacturer}, and it has ${this.wheels} wheels, ${this.doors} doors, and is steered with ${this.steering}.`);
+    }
+}
+
