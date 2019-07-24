@@ -52,7 +52,7 @@ class Vehicle {
 }
 
 class Truck extends Vehicle {
-    constructor (doors, bed) {
+    constructor (manuf, wheels, doors, bed) {
         super(manuf, wheels);
         this.type = 'Truck',
         this.doors = doors,
@@ -64,7 +64,7 @@ class Truck extends Vehicle {
 }
 
 class Sedan extends Vehicle {
-    constructor (doors, size, mpg) {
+    constructor (manuf, wheels, doors, size, mpg) {
         super(manuf, wheels);
         this.type = 'Sedan',
         this.doors = doors,
@@ -72,12 +72,12 @@ class Sedan extends Vehicle {
         this.mpg = mpg
     }
     aboutVehicle () {
-        console.log(`This Vehicle is a ${this.type}, it was made by ${this.manufacturer}, and it has ${this.wheels} wheels. It is a ${this.size} size sedan, and gets ${this.mpg} miles to the gallon.`);
+        console.log(`This Vehicle is a ${this.type}, it was made by ${this.manufacturer}, and it has ${this.wheels} wheels, and ${this.doors} doors. It is a ${this.size} size sedan, and gets ${this.mpg} miles to the gallon.`);
     }
 }
 
 class Motorcycle extends Vehicle {
-    constructor (){
+    constructor (manuf, wheels){
         super(manuf, wheels);
         this.type = 'Motorcycle',
         this.doors = 0,
@@ -87,4 +87,8 @@ class Motorcycle extends Vehicle {
         console.log(`This Vehicle is a ${this.type}, it was made by ${this.manufacturer}, and it has ${this.wheels} wheels, ${this.doors} doors, and is steered with ${this.steering}.`);
     }
 }
+
+let myCar = new Sedan ('Toyota', 4, 4, 'medium',28);
+
+myCar.aboutVehicle();
 
